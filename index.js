@@ -22,6 +22,10 @@ app.use(fileUpload({
 
 const port = process.env.PORT;
 
+app.get('/',(req,res) => {
+    return res.send('Hello simo');
+})
+
 app.use('/api/products',productRouter);
 app.use('/api/admin',adminRouter);
 
