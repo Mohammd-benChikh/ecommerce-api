@@ -1,0 +1,44 @@
+GET http://localhost:3000/api/admin/categories?page=1&limit=1&sortDir=desc HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+
+#################################
+POST http://localhost:3000/api/admin/categories HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name":"Second category",
+    "cover":"https://ssl-static.libsyn.com/p/assets/2/9/c/4/29c41bc9a1647472/athlon-sports-cover-2-podcast1.jpg",
+    "description": "His mother had always taught him not to ever think of himself as better than others. He'd tried to live by this motto. He never looked down on those who were less fortunate or who had less money than him. But the stupidity of the group of people he was talking to made him change his mind."
+}
+
+#########################
+GET http://localhost:3000/api/admin/categories/62de404b48e41b5afb638641 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+#################################
+
+PATCH http://localhost:3000/api/admin/categories/62de404b48e41b5afb638641 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+{
+    "name":"Second Category 555",
+    "cover":"https://ssl-static.libsyn.com/p/assets/2/9/c/4/29c41bc9a1647472/athlon-sports-cover-2-podcast1.jpg",
+    "description": "His mother had always taught him not to ever think of himself as better than others. He'd tried to live by this motto. He never looked down on those who were less fortunate or who had less money than him. But the stupidity of the group of people he was talking to made him change his mind."
+}
+
+
+#########################
+DELETE http://localhost:3000/api/admin/categories/62de404b48e41b5afb638641 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+
+####
+GET http://localhost:3000/api/admin/categories/62de404b48e41b5afb638641/subcategories HTTP/1.1
+Content-Type: application/json
+Accept: application/json
