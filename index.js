@@ -30,10 +30,13 @@ app.use('/api/products',productRouter);
 app.use('/api/admin',adminRouter);
 
 
-mongodbConnect()
+/* mongodbConnect()
 .then(() => {
     app.listen(port,() => console.log(`Ecommerce server running on port ${port}`));
 }).catch(error => {
     console.log(error);
 })
 
+ */
+
+app.listen(port,() => console.log(`Ecommerce server running on port ${port}`));
